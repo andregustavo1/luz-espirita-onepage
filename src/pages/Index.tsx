@@ -25,7 +25,7 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1473177104440-ffee2f376098?q=80')] bg-cover bg-center">
+        <div className="absolute inset-0 bg-[url('images/image.png')] bg-cover bg-center">
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
         <div className="container relative z-10 text-center text-white">
@@ -49,11 +49,11 @@ const Index = () => {
       <section id="sobre" className="bg-white">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="animate-on-scroll">
+            <div className="animate-on-scroll w-[320px] mx-auto md:w-[460px]">
               <img 
-                src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80" 
+                src="images/image1.png" 
                 alt="SECAL" 
-                className="rounded-lg shadow-lg w-full h-auto"
+                className="rounded-lg shadow-lg w-full h-auto object-cover"
               />
             </div>
             
@@ -214,21 +214,21 @@ const Index = () => {
               icon={Users}
               title="Palestras Públicas"
               description="Exposições doutrinárias abertas ao público, seguidas de passe magnético."
-              day="Segunda-feira"
+              day="Segunda"
               delay={100}
             />
             <TimelineItem 
               icon={BookMarked}
               title="Grupos de Estudo"
               description="Estudo sistematizado da doutrina espírita em diferentes níveis."
-              day="Terça e Quinta-feira"
+              day="Terça/Quinta"
               delay={200}
             />
             <TimelineItem 
               icon={MessageSquare}
               title="Passes e Atendimento"
               description="Atendimento fraterno e aplicação de passes para harmonização."
-              day="Quarta-feira"
+              day="Quarta"
               delay={300}
             />
             <TimelineItem 
