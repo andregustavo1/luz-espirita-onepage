@@ -25,7 +25,7 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center">
-        <div className="absolute inset-0 bg-[url('images/image.png')] bg-cover bg-center">
+      <div className="absolute inset-0 bg-[url('/images/image.png')] bg-cover bg-center">
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
         <div className="container relative z-10 text-center text-white">
