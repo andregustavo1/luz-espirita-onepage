@@ -10,14 +10,14 @@ const ContactInfo = () => {
     <div className="animate-on-scroll">
       <ul className="space-y-6">
         <li className="flex items-start">
-          <div className="mt-1 mr-3 p-2 rounded-full bg-primary/10">
+          <div className="mt-1 mr-3 p-2 rounded-full bg-primary/10 hover-transition hover:bg-primary/20">
             <Phone className="h-5 w-5 text-primary" />
           </div>
           <div>
             <h3 className="font-medium">WhatsApp</h3>
             <button
               onClick={navigateToWhatsApp}
-              className="text-primary hover:underline"
+              className="text-primary hover-transition hover:text-primary-dark hover:underline"
             >
               Marcelo
             </button>
@@ -25,14 +25,14 @@ const ContactInfo = () => {
         </li>
         
         <li className="flex items-start">
-          <div className="mt-1 mr-3 p-2 rounded-full bg-primary/10">
+          <div className="mt-1 mr-3 p-2 rounded-full bg-primary/10 hover-transition hover:bg-primary/20">
             <Mail className="h-5 w-5 text-primary" />
           </div>
           <div>
             <h3 className="font-medium">E-mail</h3>
             <a 
               href="mailto:mrossato@gmail.com" 
-              className="text-primary hover:underline"
+              className="text-primary hover-transition hover:text-primary-dark hover:underline"
             >
               mrossato@gmail.com
             </a>
@@ -40,7 +40,7 @@ const ContactInfo = () => {
         </li>
         
         <li className="flex items-start">
-          <div className="mt-1 mr-3 p-2 rounded-full bg-primary/10">
+          <div className="mt-1 mr-3 p-2 rounded-full bg-primary/10 hover-transition hover:bg-primary/20">
             <MapPin className="h-5 w-5 text-primary" />
           </div>
           <div>
@@ -50,7 +50,7 @@ const ContactInfo = () => {
         </li>
         
         <li className="flex items-start">
-          <div className="mt-1 mr-3 p-2 rounded-full bg-primary/10">
+          <div className="mt-1 mr-3 p-2 rounded-full bg-primary/10 hover-transition hover:bg-primary/20">
             <Instagram className="h-5 w-5 text-primary" />
           </div>
           <div>
@@ -59,7 +59,7 @@ const ContactInfo = () => {
               href="https://www.instagram.com/secal.lem" 
               target="_blank" 
               rel="noreferrer"
-              className="text-primary hover:underline"
+              className="text-primary hover-transition hover:text-primary-dark hover:underline"
             >
               @secal.lem
             </a>
@@ -67,7 +67,7 @@ const ContactInfo = () => {
         </li>
         
         <li className="flex items-start">
-          <div className="mt-1 mr-3 p-2 rounded-full bg-primary/10">
+          <div className="mt-1 mr-3 p-2 rounded-full bg-primary/10 hover-transition hover:bg-primary/20">
             <Youtube className="h-5 w-5 text-primary" />
           </div>
           <div>
@@ -76,7 +76,7 @@ const ContactInfo = () => {
               href="https://www.youtube.com/@secal2963" 
               target="_blank" 
               rel="noreferrer"
-              className="text-primary hover:underline"
+              className="text-primary hover-transition hover:text-primary-dark hover:underline"
             >
               @secal2963
             </a>

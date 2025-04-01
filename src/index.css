@@ -103,6 +103,22 @@
   .animated {
     @apply opacity-100;
   }
+
+  .hover-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .hover-link {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .hover-elevate {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
 }
 
 #root {

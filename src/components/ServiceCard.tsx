@@ -11,11 +11,11 @@ interface ServiceCardProps {
 const ServiceCard = ({ icon: Icon, title, description, delay = 0 }: ServiceCardProps) => {
   return (
     <div 
-      className="card card-hover flex p-6 animate-on-scroll"
+      className="card hover-elevate flex p-6 animate-on-scroll"
       style={{ transitionDelay: `${delay}ms` }}
     >
       <div className="mr-4">
-        <div className="p-3 rounded-full bg-secondary/20">
+        <div className="p-3 rounded-full bg-secondary/20 hover-transition hover:bg-secondary/30">
           <Icon className="h-6 w-6 text-secondary-dark" />
         </div>
       </div>
