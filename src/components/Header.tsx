@@ -37,7 +37,7 @@ const Header = () => {
     >
       <div className="container flex items-center justify-between">
         <div className="flex items-center">
-          <h1 className="text-xl md:text-2xl font-semibold text-primary">
+          <h1 className={`text-xl md:text-2xl font-semibold ${scrolled ? 'text-primary' : 'text-white'}`}>
             SECAL
           </h1>
         </div>
@@ -45,31 +45,31 @@ const Header = () => {
         <nav className="hidden md:flex items-center space-x-8">
           <button 
             onClick={() => scrollToSection('sobre')} 
-            className="text-gray-700 hover:text-primary transition-colors"
+            className={`hover:text-primary transition-colors ${scrolled ? 'text-gray-700' : 'text-white'}`}
           >
             Quem Somos
           </button>
           <button 
             onClick={() => scrollToSection('diferenciais')} 
-            className="text-gray-700 hover:text-primary transition-colors"
+            className={`hover:text-primary transition-colors ${scrolled ? 'text-gray-700' : 'text-white'}`}
           >
             O Que Oferecemos
           </button>
           <button 
             onClick={() => scrollToSection('atividades')} 
-            className="text-gray-700 hover:text-primary transition-colors"
+            className={`hover:text-primary transition-colors ${scrolled ? 'text-gray-700' : 'text-white'}`}
           >
             Nossas Atividades
           </button>
           <button 
             onClick={() => scrollToSection('programacao')} 
-            className="text-gray-700 hover:text-primary transition-colors"
+            className={`hover:text-primary transition-colors ${scrolled ? 'text-gray-700' : 'text-white'}`}
           >
             Programação
           </button>
           <button 
             onClick={() => scrollToSection('contato')} 
-            className="text-gray-700 hover:text-primary transition-colors"
+            className={`hover:text-primary transition-colors ${scrolled ? 'text-gray-700' : 'text-white'}`}
           >
             Contato
           </button>
@@ -77,7 +77,7 @@ const Header = () => {
         
         <button 
           onClick={navigateToWhatsApp}
-          className="btn-primary"
+          className={`${scrolled ? 'btn-primary' : 'bg-white text-primary hover:bg-gray-100'} px-6 py-3 rounded-md font-medium transition-colors`}
         >
           Fale Conosco
         </button>
