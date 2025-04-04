@@ -1,9 +1,11 @@
 
 import { useState, useEffect } from 'react';
 import { BookOpen, Heart, MessageSquare, Users } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,10 +21,20 @@ const Header = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    // Check if we're on the home page
+    if (window.location.pathname === '/') {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If we're not on the home page, navigate to the home page first
+      navigate(`/?section=${id}`);
     }
+  };
+
+  const navigateToPage = (path: string) => {
+    navigate(path);
   };
 
   const navigateToWhatsApp = () => {
@@ -37,9 +49,12 @@ const Header = () => {
     >
       <div className="container flex items-center justify-between">
         <div className="flex items-center">
-          <h1 className={`text-xl md:text-2xl font-semibold ${scrolled ? 'text-primary' : 'text-white'}`}>
+          <button 
+            onClick={() => navigateToPage('/')}
+            className={`text-xl md:text-2xl font-semibold hover-transition ${scrolled ? 'text-primary' : 'text-white'}`}
+          >
             SECAL
-          </h1>
+          </button>
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">
@@ -66,6 +81,12 @@ const Header = () => {
             className={`hover-transition hover:text-primary ${scrolled ? 'text-gray-700' : 'text-white'}`}
           >
             Programação
+          </button>
+          <button 
+            onClick={() => navigateToPage('/sobre')}
+            className={`hover-transition hover:text-primary ${scrolled ? 'text-gray-700' : 'text-white'}`}
+          >
+            Sobre Nós
           </button>
           <button 
             onClick={() => scrollToSection('contato')} 

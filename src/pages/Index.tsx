@@ -1,6 +1,7 @@
 
 import { useEffect } from 'react';
-import { BookOpen, Heart, MessageSquare, Users, BookMarked, BookText, HandHeart, Baby, Sparkles } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
+import { BookOpen, Heart, MessageSquare, Users, BookMarked, BookText, Baby, Sparkles } from 'lucide-react';
 import Header from '../components/Header';
 import SectionTitle from '../components/SectionTitle';
 import FeatureCard from '../components/FeatureCard';
@@ -11,9 +12,23 @@ import Footer from '../components/Footer';
 import { setupAnimations } from '../utils/animations';
 
 const Index = () => {
+  const location = useLocation();
+
   useEffect(() => {
     setupAnimations();
-  }, []);
+    
+    // Check if we have a section parameter in the URL
+    const params = new URLSearchParams(location.search);
+    const section = params.get('section');
+    if (section) {
+      const element = document.getElementById(section);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
 
   const navigateToWhatsApp = () => {
     window.open(`https://wa.me/+5577999999999?text=Olá! Gostaria de saber mais sobre a SECAL.`, '_blank');
@@ -214,28 +229,28 @@ const Index = () => {
               icon={Users}
               title="Palestras Públicas"
               description="Exposições doutrinárias abertas ao público, seguidas de passe magnético."
-              day="Segunda"
+              day="Terça/Quinta - 20h00"
               delay={100}
             />
             <TimelineItem 
               icon={BookMarked}
               title="Grupos de Estudo"
               description="Estudo sistematizado da doutrina espírita em diferentes níveis."
-              day="Terça/Quinta"
+              day="A definir"
               delay={200}
             />
             <TimelineItem 
               icon={MessageSquare}
-              title="Passes e Atendimento"
+              title="Passes e Atendimento Fraterno"
               description="Atendimento fraterno e aplicação de passes para harmonização."
-              day="Quarta"
+              day="Segunda/Quarta - 19h30"
               delay={300}
             />
             <TimelineItem 
-              icon={Heart}
-              title="Assistência Social"
-              description="Atividades de assistência material e espiritual à comunidade."
-              day="Sábado"
+              icon={Baby}
+              title="Evangelização Infantil"
+              description="Ensino dos princípios morais e espirituais para crianças."
+              day="Sábados - 15h00"
               delay={400}
             />
           </div>
